@@ -19,19 +19,19 @@ spec:
           image: ajiqbrainx/frontend:1
           ports:
             - containerPort: 8080
-
-#Node Port service for the Jenkins Deployment 
-apiVersion: v1
-kind: Service
-metadata:
-  name: service-name
-spec:
-  type: ClusterIP
-  ports:
-   -port: 8080
-    targetPort: 8080
-  selector:
-    app: frontend
+ ---
+#Node Port service for the Azure Deployment 
+ apiVersion: apps/v1
+ kind: Service
+ metadata:
+   name: frontend-service
+ spec:
+   type: ClusterIP
+   ports:
+    -port: 8080
+     targetPort: 8080
+   selector:
+     app: frontend
            
             
             
