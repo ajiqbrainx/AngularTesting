@@ -19,7 +19,7 @@ spec:
           image: ajiqbrainx/frontend:1
           ports:
             - containerPort: 8080
- ---
+
 #Node Port service for the Azure Deployment 
  apiVersion: apps/v1
  kind: Service
